@@ -381,13 +381,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Zaozi.Main\Zaozi.Main.csproj">
-      <Project>{0714b5db-468a-4e28-96f0-20d42173a62f}</Project>
-      <Name>Zaozi.Main</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Zaozi.DB\Zaozi.DB.csproj">
       <Project>{45efd7ec-6fb0-4536-a8c4-a1e34fdce258}</Project>
       <Name>Zaozi.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zaozi.Main\Zaozi.Main.csproj">
+      <Project>{0714b5db-468a-4e28-96f0-20d42173a62f}</Project>
+      <Name>Zaozi.Main</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
