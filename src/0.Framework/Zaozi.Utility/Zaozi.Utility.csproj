@@ -4,11 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0714B5DB-468A-4E28-96F0-20D42173A62F}</ProjectGuid>
+    <ProjectGuid>{2A14289C-47F8-42FC-B83B-672CA7DA27AA}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <LangVersion>latestMajor</LangVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Zaozi.Main</RootNamespace>
-    <AssemblyName>Zaozi.Main</AssemblyName>
+    <RootNamespace>Zaozi.Utility</RootNamespace>
+    <AssemblyName>Zaozi.Utility</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,58 +32,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xaml" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="PropertyChanged.Fody">
-      <Version>4.1.0</Version>
-    </PackageReference>
-    <PackageReference Include="Synyi.Framework.Kernel">
-      <Version>3.0.19</Version>
-    </PackageReference>
-    <PackageReference Include="Synyi.Framework.Wpf">
-      <Version>3.0.16</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Login\ViewModels\LoginViewModel.cs" />
-    <Compile Include="Login\Views\LoginView.xaml.cs">
-      <DependentUpon>LoginView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPluginIds.cs" />
-    <Compile Include="MainWpfModule.cs" />
-    <Compile Include="Navigate\ViewModels\NavigateViewModel.cs" />
-    <Compile Include="Navigate\Views\NavigateView.xaml.cs">
-      <DependentUpon>NavigateView.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="DataTableHelper.cs" />
+    <Compile Include="DEncryptHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Login\Views\LoginView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Navigate\Views\NavigateView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Zaozi.BLL\Zaozi.BLL.csproj">
-      <Project>{BCAB94D0-A1E8-4782-B711-FFD51A64CF83}</Project>
-      <Name>Zaozi.BLL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
