@@ -1,4 +1,5 @@
-﻿using Synyi.Framework.Wpf.Plugins;
+﻿using Synyi.Framework.Wpf.Mvvm;
+using Synyi.Framework.Wpf.Plugins;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,18 @@ namespace Zaozi.Main.Login.ViewModels
         protected override Task DoOnNavigatedTo(NavigationContext context)
         {
             return Task.CompletedTask;
+        }
+
+        public LoginViewModel()
+        {
+            this.CloseCommand = new ActionCommand(this.ExecuteCloseCommand);
+        }
+
+        public ActionCommand CloseCommand { get; }
+
+        private void ExecuteCloseCommand()
+        {
+            this.Finish(true, null);
         }
     }
 }
