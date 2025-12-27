@@ -41,6 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Synyi.Framework.Kernel">
+      <Version>3.0.19</Version>
+    </PackageReference>
+    <PackageReference Include="Synyi.Framework.Wpf">
+      <Version>3.0.16</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessModel\PharmConfig.cs" />
+    <Compile Include="BusinessModel\SystemData.cs" />
+    <Compile Include="BusinessModel\SystemInfo.cs" />
+    <Compile Include="BusinessModel\UserBusiPower.cs" />
+    <Compile Include="BusinessModel\UserInfo.cs" />
     <Compile Include="DataBaseModel\emp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
