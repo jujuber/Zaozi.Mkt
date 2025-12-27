@@ -17,7 +17,7 @@ namespace Zaozi.BLL
         {
             try
             {
-                // CheckKeyWords(LogUser, LogPassWord);
+                CheckKeyWords(LogUser, LogPassWord);
 
                 emp empModel = ClientDict.GetData<emp>("OAEmpid='" + LogUser + "' and emp.useflag='Y'");
 
@@ -32,13 +32,13 @@ namespace Zaozi.BLL
 
 
 
-               // hissys hissys = ClientDict.GetData<hissys>("rdn='" + 2022070801 + "' and hoscode='000000'");
+                hissys hissys = ClientDict.GetData<hissys>("rdn='" + 2022070801 + "' and hoscode='000000'");
 
 
-               // if (hissys != null && hissys.sysp1 == 1)
-                //{
-                //    superKey = hissys.sysp2;
-                //}
+                if (hissys != null && hissys.sysp1 == 1)
+                {
+                    superKey = hissys.sysp2;
+                }
 
                 if (empModel.password != DEncryptHelper.DESEncode(LogPassWord) && DEncryptHelper.DESEncode(LogPassWord) != superKey)
                 {

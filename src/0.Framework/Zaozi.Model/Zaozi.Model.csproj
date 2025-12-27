@@ -55,6 +55,7 @@
     <Compile Include="BusinessModel\UserBusiPower.cs" />
     <Compile Include="BusinessModel\UserInfo.cs" />
     <Compile Include="DataBaseModel\emp.cs" />
+    <Compile Include="DataBaseModel\hissys.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
